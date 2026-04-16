@@ -1,0 +1,16 @@
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+if(DEFINED ENV{ARM_TOOLCHAIN_PATH})
+    set(TC $ENV{ARM_TOOLCHAIN_PATH})
+elseif(DEFINED ARM_TOOLCHAIN_PATH)
+    set(TC ${ARM_TOOLCHAIN_PATH})
+else()
+    message(FATAL_ERROR "Set ARM_TOOLCHAIN_PATH to the toolchain bin directory")
+endif()
+
+set(TRIPLE arm-none-eabi)
+set(CMAKE_C_COMPILER   ${TC}/${TRIPLE}-gcc)
+set(CMAKE_ASM_COMPILER ${TC}/${TRIPLE}-gcc)
+set(CMAKE_OBJCOPY      ${TC}/${TRIPLE}-objcopy)

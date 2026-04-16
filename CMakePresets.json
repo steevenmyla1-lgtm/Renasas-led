@@ -1,0 +1,16 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/Debug",
+      "toolchainFile": "${sourceDir}/cmake/gcc.cmake",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" },
+      "environment": { "PATH": "$env{HOME}/ninja/bin:$penv{PATH}" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "Debug", "configurePreset": "Debug" }
+  ]
+}

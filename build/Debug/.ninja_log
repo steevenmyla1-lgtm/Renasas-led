@@ -1,0 +1,5 @@
+# ninja log v5
+1	9	1776315673820425333	CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj	8e216f3b2caf3d2b
+1	17	1776315673828643993	CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj	6c621a169c3d830d
+1	17	1776315673828643993	CMakeFiles/bare_metal.elf.dir/app/main.c.obj	488bf4126b00de4d
+17	25	1776315673834516887	bare_metal.elf	7b2cfb7716979ab8

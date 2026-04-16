@@ -1,0 +1,3 @@
+/home/hbl/steve_hbl/bare_metal/build/Debug/CMakeFiles/bare_metal.elf.dir
+/home/hbl/steve_hbl/bare_metal/build/Debug/CMakeFiles/edit_cache.dir
+/home/hbl/steve_hbl/bare_metal/build/Debug/CMakeFiles/rebuild_cache.dir

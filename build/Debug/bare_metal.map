@@ -1,0 +1,196 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .data          0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .bss           0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .text          0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .data          0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .text          0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+ .data          0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ATCM             0x00000000         0x00080000         xrw
+BTCM             0x00100000         0x00010000         xrw
+SYSRAM           0x10000000         0x00100000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+LOAD CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+LOAD CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+START GROUP
+LOAD /usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7/nofp/libgcc.a
+LOAD /usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7/nofp/libg_nano.a
+LOAD /usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7/nofp/libgcc.a
+LOAD /usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7/nofp/libc_nano.a
+END GROUP
+                0x00000000                        ATCM_START = 0x0
+                0x00080000                        ATCM_SIZE = 0x80000
+                0x00100000                        BTCM_START = 0x100000
+                0x00010000                        BTCM_SIZE = 0x10000
+                0x10000000                        SYSRAM_START = 0x10000000
+                0x00100000                        SYSRAM_SIZE = 0x100000
+                0x00000100                        UND_STACK_SIZE = 0x100
+                0x00000100                        ABT_STACK_SIZE = 0x100
+                0x00000100                        FIQ_STACK_SIZE = 0x100
+                0x00000400                        IRQ_STACK_SIZE = 0x400
+                0x00000400                        SVC_STACK_SIZE = 0x400
+
+.vectors        0x00000000       0x20
+ *(.vectors)
+ .vectors       0x00000000       0x20 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+                0x00000000                _vectors
+
+.text           0x00000020      0x2b4
+ *(.startup)
+ .startup       0x00000020       0xb0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+                0x00000020                reset_handler
+                0x00000090                undef_handler
+                0x00000094                svc_handler
+                0x00000098                prefetch_abort_handler
+                0x0000009c                data_abort_handler
+                0x000000a0                irq_handler
+                0x000000a4                fiq_handler
+ *(.text*)
+ .text.mpu_init
+                0x000000d0       0xac CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+                0x000000d0                mpu_init
+ .text.led_init
+                0x0000017c       0x80 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+ .text.led_toggle
+                0x000001fc       0x66 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+ .text.delay    0x00000262       0x20 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+ .text.main     0x00000282       0x20 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+                0x00000282                main
+ *(.rodata*)
+ *fill*         0x000002a2        0x2 
+ .rodata.mpu_regions
+                0x000002a4       0x30 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+                0x000002d4                        . = ALIGN (0x4)
+                0x000002d4                        _data_lma = LOADADDR (.data)
+
+.glue_7         0x000002d4        0x0
+ .glue_7        0x000002d4        0x0 linker stubs
+
+.glue_7t        0x000002d4        0x0
+ .glue_7t       0x000002d4        0x0 linker stubs
+
+.vfp11_veneer   0x000002d4        0x0
+ .vfp11_veneer  0x000002d4        0x0 linker stubs
+
+.v4_bx          0x000002d4        0x0
+ .v4_bx         0x000002d4        0x0 linker stubs
+
+.iplt           0x000002d4        0x0
+ .iplt          0x000002d4        0x0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+
+.rel.dyn        0x000002d4        0x0
+ .rel.iplt      0x000002d4        0x0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+
+.data           0x000002d4        0x0
+                0x000002d4                        _data_start = .
+ *(.data*)
+                0x000002d4                        . = ALIGN (0x4)
+                0x000002d4                        _data_end = .
+
+.igot.plt       0x000002d4        0x0
+ .igot.plt      0x000002d4        0x0 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+
+.bss            0x000002d4        0x4
+                0x000002d4                        _bss_start = .
+ *(.bss*)
+ .bss.state.0   0x000002d4        0x1 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+ *(COMMON)
+                0x000002d8                        . = ALIGN (0x4)
+ *fill*         0x000002d5        0x3 
+                0x000002d8                        _bss_end = .
+
+.stacks         0x00100000      0xb00
+                0x00100000                        . = ALIGN (0x8)
+                0x00100100                        . = (. + UND_STACK_SIZE)
+ *fill*         0x00100000      0x100 
+                0x00100100                        _und_stack_top = .
+                0x00100200                        . = (. + ABT_STACK_SIZE)
+ *fill*         0x00100100      0x100 
+                0x00100200                        _abt_stack_top = .
+                0x00100300                        . = (. + FIQ_STACK_SIZE)
+ *fill*         0x00100200      0x100 
+                0x00100300                        _fiq_stack_top = .
+                0x00100700                        . = (. + IRQ_STACK_SIZE)
+ *fill*         0x00100300      0x400 
+                0x00100700                        _irq_stack_top = .
+                0x00100b00                        . = (. + SVC_STACK_SIZE)
+ *fill*         0x00100700      0x400 
+                0x00100b00                        _svc_stack_top = .
+OUTPUT(bare_metal.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x2f
+ .ARM.attributes
+                0x00000000       0x21 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .ARM.attributes
+                0x00000021       0x33 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .ARM.attributes
+                0x00000054       0x33 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.comment        0x00000000       0x46
+ .comment       0x00000000       0x46 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+                                 0x47 (size before relaxing)
+ .comment       0x00000046       0x47 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_line     0x00000000      0x41c
+ .debug_line    0x00000000       0x8f CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .debug_line    0x0000008f      0x179 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_line    0x00000208      0x214 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_line_str
+                0x00000000       0x5c
+ .debug_line_str
+                0x00000000       0x5c CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+
+.debug_info     0x00000000      0x26d
+ .debug_info    0x00000000       0x23 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .debug_info    0x00000023      0x115 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_info    0x00000138      0x135 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_abbrev   0x00000000      0x184
+ .debug_abbrev  0x00000000       0x12 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .debug_abbrev  0x00000012       0xb0 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_abbrev  0x000000c2       0xc2 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_aranges  0x00000000       0x80
+ .debug_aranges
+                0x00000000       0x28 CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .debug_aranges
+                0x00000028       0x20 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_aranges
+                0x00000048       0x38 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_str      0x00000000      0x24b
+ .debug_str     0x00000000      0x24b CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+                                 0x6a (size before relaxing)
+ .debug_str     0x0000024b      0x1df CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_str     0x0000024b      0x1ff CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_rnglists
+                0x00000000       0x54
+ .debug_rnglists
+                0x00000000       0x1a CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj
+ .debug_rnglists
+                0x0000001a       0x14 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_rnglists
+                0x0000002e       0x26 CMakeFiles/bare_metal.elf.dir/app/main.c.obj
+
+.debug_frame    0x00000000       0xcc
+ .debug_frame   0x00000000       0x38 CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj
+ .debug_frame   0x00000038       0x94 CMakeFiles/bare_metal.elf.dir/app/main.c.obj

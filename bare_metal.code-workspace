@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.ld": "plaintext",
+            "*.S": "arm"
+        },
+        "cmake.configureOnOpen": false
+    }
+}

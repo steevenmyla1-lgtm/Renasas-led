@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/hbl/steve_hbl/bare_metal/build/Debug",
+  "command": "/usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -I/home/hbl/steve_hbl/bare_metal/bsp -I/home/hbl/steve_hbl/bare_metal/app -I/home/hbl/steve_hbl/bare_metal/vendor/Device/RENESAS/Include -I/home/hbl/steve_hbl/bare_metal/vendor/Device/RENESAS/Include/cr -I/home/hbl/steve_hbl/bare_metal/vendor/CMSIS/Core/Include -g -mcpu=cortex-r52 -mthumb -mthumb-interwork -fsigned-char -ffunction-sections -fdata-sections -x assembler-with-cpp -o CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj -c /home/hbl/steve_hbl/bare_metal/startup/startup.S",
+  "file": "/home/hbl/steve_hbl/bare_metal/startup/startup.S",
+  "output": "CMakeFiles/bare_metal.elf.dir/startup/startup.S.obj"
+},
+{
+  "directory": "/home/hbl/steve_hbl/bare_metal/build/Debug",
+  "command": "/usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -I/home/hbl/steve_hbl/bare_metal/bsp -I/home/hbl/steve_hbl/bare_metal/app -I/home/hbl/steve_hbl/bare_metal/vendor/Device/RENESAS/Include -I/home/hbl/steve_hbl/bare_metal/vendor/Device/RENESAS/Include/cr -I/home/hbl/steve_hbl/bare_metal/vendor/CMSIS/Core/Include -g -mcpu=cortex-r52 -mthumb -mthumb-interwork -fsigned-char -ffunction-sections -fdata-sections -std=c99 -Wall -Wextra -Wmissing-declarations -Wconversion -fmessage-length=0 -o CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj -c /home/hbl/steve_hbl/bare_metal/bsp/mpu.c",
+  "file": "/home/hbl/steve_hbl/bare_metal/bsp/mpu.c",
+  "output": "CMakeFiles/bare_metal.elf.dir/bsp/mpu.c.obj"
+},
+{
+  "directory": "/home/hbl/steve_hbl/bare_metal/build/Debug",
+  "command": "/usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc -I/home/hbl/steve_hbl/bare_metal/bsp -I/home/hbl/steve_hbl/bare_metal/app -I/home/hbl/steve_hbl/bare_metal/vendor/Device/RENESAS/Include -I/home/hbl/steve_hbl/bare_metal/vendor/Device/RENESAS/Include/cr -I/home/hbl/steve_hbl/bare_metal/vendor/CMSIS/Core/Include -g -mcpu=cortex-r52 -mthumb -mthumb-interwork -fsigned-char -ffunction-sections -fdata-sections -std=c99 -Wall -Wextra -Wmissing-declarations -Wconversion -fmessage-length=0 -o CMakeFiles/bare_metal.elf.dir/app/main.c.obj -c /home/hbl/steve_hbl/bare_metal/app/main.c",
+  "file": "/home/hbl/steve_hbl/bare_metal/app/main.c",
+  "output": "CMakeFiles/bare_metal.elf.dir/app/main.c.obj"
+}
+]

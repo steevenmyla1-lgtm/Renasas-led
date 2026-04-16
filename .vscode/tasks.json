@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure",
+            "type": "shell",
+            "command": "cmake --preset Debug",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "ARM_TOOLCHAIN_PATH": "/usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin"
+                }
+            },
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cmake --build build/Debug --parallel",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "ARM_TOOLCHAIN_PATH": "/usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin"
+                }
+            },
+            "group": { "kind": "build", "isDefault": true },
+            "presentation": { "reveal": "always", "panel": "shared" },
+            "problemMatcher": "$gcc",
+            "dependsOn": "Configure"
+        },
+        {
+            "label": "Rebuild",
+            "type": "shell",
+            "command": "cmake --build build/Debug --clean-first --parallel",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "ARM_TOOLCHAIN_PATH": "/usr/local/arm-gnu-toolchain/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin"
+                }
+            },
+            "group": "build",
+            "presentation": { "reveal": "always", "panel": "shared" },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "JLinkExe -device R9A07G074M04 -if SWD -speed 4000 -autoconnect 1 -CommanderScript ${workspaceFolder}/.vscode/flash.jlink",
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": "test",
+            "presentation": { "reveal": "always", "panel": "shared" },
+            "problemMatcher": [],
+            "dependsOn": "Build"
+        }
+    ]
+}

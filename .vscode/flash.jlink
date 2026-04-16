@@ -1,0 +1,4 @@
+r
+loadfile build/Debug/bare_metal.elf
+g
+q
